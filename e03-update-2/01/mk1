@@ -1,0 +1,4 @@
+t: p
+	touch t
+p:
+	touch p

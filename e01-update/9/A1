@@ -1,0 +1,14 @@
+g: t
+	@echo =======
+	@echo g
+t: p
+	@echo =======
+	@echo t
+p: d
+	@echo =======
+	@echo p
+	touch p -r t
+	# 使得 t 比 g 新，这样 g 会执行
+	touch g
+	touch t
+

@@ -1,0 +1,10 @@
+t: p
+	@echo t start
+	touch t
+	@echo t end
+p:
+	@echo p: start
+	touch p
+	sleep 1
+	touch t
+	@echo p: end

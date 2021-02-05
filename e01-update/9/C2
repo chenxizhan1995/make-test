@@ -1,0 +1,12 @@
+g: t
+	@echo =======
+	@echo g
+t: p
+	@echo =======
+	@echo t
+p: d
+	@echo =======
+	@echo p
+	touch p # p 比 t0 新, t 会执行
+	touch t # t > g0, g 会执行
+

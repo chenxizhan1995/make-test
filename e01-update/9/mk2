@@ -1,0 +1,10 @@
+g: t
+	@echo p
+t: p
+	@echo t
+p: d
+	touch p -r t
+	# 使得 t 比 g 新，这样 g 会执行
+	touch g
+	touch t
+

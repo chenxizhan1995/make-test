@@ -1,0 +1,14 @@
+g: t
+	@echo =======
+	@echo g
+t: p
+	@echo =======
+	@echo t
+p: d
+	@echo =======
+	@echo p
+	# 使得 p <=t0, 如此 t 不会执行，g 就不会执行
+	# 但因为 p 是伪目标，
+	touch p -r t
+.PHONY: p
+
